@@ -1,9 +1,13 @@
 import './style.css'
 import javascriptLogo from './javascript.svg'
 import viteLogo from '/vite.svg'
-import { dateJs } from './date'
-
-dateJs()
+import {
+	dateJs,
+	rangeDate,
+	programmersDay,
+	dateToFormat,
+	dateToObject,
+} from './date'
 
 document.querySelector('#app').innerHTML = `
   <div>
@@ -15,8 +19,11 @@ document.querySelector('#app').innerHTML = `
     </a>
     <h1>Hello Vite!</h1>
     <div class="card">
+      <div id="dateJs">${dateJs()}</div> 
+      <div id="rangeDate">${rangeDate()}</div> 
+      <div id="programmersDay">${programmersDay()}</div> 
+      <div>${dateToFormat()}</div> 
+      <div>${dateToObject()}</div> 
     </div>
   </div>
 `
-
-setupCounter(document.querySelector('#counter'))
