@@ -27,3 +27,26 @@ document.querySelector('#app').innerHTML = `
     </div>
   </div>
 `
+
+const number = 1234567.89;
+const formatter = new Intl.NumberFormat('en-US', {
+	style: 'currency',
+	currency: 'USD'
+});
+
+console.log(formatter.format(number));
+
+const date = new Date();
+const formatterTwo = new Intl.DateTimeFormat('de-DE', {
+	day: 'numeric',
+	month: 'long',
+	year: 'numeric'
+});
+
+console.log(formatterTwo.format(date));
+
+const string1 = 'apple';
+const string2 = 'banana';
+const collator = new Intl.Collator('en-US');
+
+console.log(collator.compare(string1, string2));
